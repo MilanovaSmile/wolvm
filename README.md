@@ -30,7 +30,7 @@ ExecStart=/usr/local/bin/wolvm.sh
 [Install]
 WantedBy=multi-user.target
 ```
-5. Add to startup, activate the service
+5. Add to startup, step 3. Activate the service
 ```shell
 sudo systemctl daemon-reload
 sudo systemctl enable wolvm.service
