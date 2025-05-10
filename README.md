@@ -13,11 +13,11 @@ sudo chmod 755 /usr/local/bin/wolvm.sh
 sudo chmod +x /usr/local/bin/wolvm.sh
 sudo chown $USER:$USER /usr/local/bin/wolvm.sh
 ```
-3. Add to startup, create new startup file
+3. Add to startup, step 1. Create new startup file
 ```shell
 sudo systemctl edit --force --full wolvm.service
 ```
-4. Add to startup, copy the contents to a new startup file
+4. Add to startup, step 2. Copy the contents to a new startup file
 ```
 [Unit]
 Description=Wake-on-Lan for virtual machines.
@@ -40,3 +40,4 @@ sudo systemctl enable wolvm.service
 |         OS         | Status |
 |--------------------|:------:|
 | Linux Ubuntu 24.10 |    ✅   |
+| Linux Ubuntu 25.04 |    ✅   |
