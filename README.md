@@ -1,8 +1,12 @@
 # wolvm
 Wake-on-Lan for virtual machines. The application listens to network interfaces waiting for a "magic packet". When a packet is received, a search is performed for a virtual machine whose MAC address of the network interface matches the received MAC address. The search for a virtual machine is performed via virsh.
 
-# Install
+# Auto install
+```shell
+sudo apt install ./wolvm_1.0.0_all.deb
+```
 
+# Manual install
 1. Copy wolvm.sh to /usr/local/bin
 ```shell
 sudo cp ./wolvm.sh /usr/local/bin/
@@ -34,6 +38,11 @@ WantedBy=multi-user.target
 ```shell
 sudo systemctl daemon-reload
 sudo systemctl enable wolvm.service
+```
+
+6. Run service
+```shell
+sudo systemctl start wolvm.service
 ```
 
 # Tested
